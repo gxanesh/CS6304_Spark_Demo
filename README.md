@@ -10,13 +10,10 @@
 
 
 ### Spark Demo
-Follow the instructions from commands.txt file.
-
-
-
+Please follow the instructions from commands.txt file.
 
 ### Install Spark
-DO NOT Install Spark again if it is already installed in your VM.  
+DO NOT install Spark again if it has already been installed in your VM.  
 You can consider the below section as a self-note.  
 We consider that Java and Hadoop are already installed.
 Follow the below steps:
@@ -42,6 +39,6 @@ You can access spark by typing absolute path "/opt/spark/bin/spark-shell" also.
 
 ### Run a scala file
 Run a scala file using the following command 
-spark-shell -i '/home/mrpk9/test_scala.scala'
+spark-shell -i '/home/gs37r/test_scala.scala'
 
 Please replace the paths according to your file locations. If you are facing issues please make sure you are giving the correct paths while loading the hadoop file from the HDFS
