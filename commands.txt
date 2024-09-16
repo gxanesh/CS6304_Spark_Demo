@@ -18,7 +18,7 @@ Simple WordCount
 
 spark-shell
 
-val loadfile = sc.textFile("hdfs://localhost:9000/user/mrpk9/InputFolder/input1.txt")
+val loadfile = sc.textFile("hdfs://localhost:9000/user/gs37r/InputFolder/input1.txt")
 System.out.println(loadfile.collect().mkString("\n"))
 
 val words = loadfile.flatMap(line => line.split(" "))
@@ -36,7 +36,7 @@ System.out.println(sorted.collect().mkString("\n"))
 val filter = sorted.filter(_._2 > 1)
 System.out.println(filter.collect().mkString("\n"))
 
-filter.saveAsTextFile("hdfs://localhost:9000/user/mrpk9/OutputFolder/")
+filter.saveAsTextFile("hdfs://localhost:9000/user/gs37r/OutputFolder/")
 
 
 **************************
@@ -45,7 +45,7 @@ Word count in all Chapters
 
 spark-shell
 
-val loadfile = sc.textFile("hdfs://localhost:9000/user/mrpk9/InputFolder/input2.txt")
+val loadfile = sc.textFile("hdfs://localhost:9000/user/gs37r/InputFolder/input2.txt")
 
 val pairs = loadfile.map{ line => val parts = line.split("\t");	(parts(0), parts(1)); }
 System.out.println(pairs.collect().mkString("\n"))
@@ -82,7 +82,7 @@ Word count in all Chapters (another approach)
 
 spark-shell
 
-val loadfile = sc.textFile("hdfs://localhost:9000/user/mrpk9/InputFolder/input2.txt")
+val loadfile = sc.textFile("hdfs://localhost:9000/user/gs37r/InputFolder/input2.txt")
 
 val pairs = loadfile.map{ line => val parts = line.split("\t"); (parts(0), parts(1)); }
 System.out.println(pairs.collect().mkString("\n"))
