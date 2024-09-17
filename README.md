@@ -45,15 +45,31 @@ spark-shell -i '/home/gs37r/test_scala.scala'
 
 ### Hadoop Commands
 Open new tab on the terminal
+
+Check if Hadoop Deamons are Running:
 ```
-hadoop fs -rm -r InputFolder				//remove inputfolder if exist
-hadoop fs -mkdir InputFolder				//make the inputfolder
-hadoop fs -copyFromLocal '/home/cloudera/Downloads/Spark_Demo-master/input1.txt' InputFolder
-hadoop fs -copyFromLocal '/home/cloudera/Downloads/Spark_Demo-master/input2.txt' InputFolder
-							//copy input1.txt and input2.txt to hdfs inputfolder
-hadoop fs -rm -r OutputFolder				//remove outputfolder if exist
-hadoop fs -ls OutputFolder				//see the files in outputfolder
-hadoop fs -cat OutputFolder/part-00000			//see the content of the result
+jps
+```
+If Hadoop Deamons are not Running, run following commands:
+```
+stop-all.sh
+hadoop namenode -format
+start-all.sh
+```
+Check again:
+```
+jps
+```
+
+```
+hadoop fs -rm -r InputFolder					//remove inputfolder if exist
+hadoop fs -mkdir -p InputFolder				       //make the inputfolder
+
+hadoop fs -copyFromLocal '/home/Downloads/Spark_Demo-master/input1.txt' InputFolder  // copy input1.txt to hdfs inputfolder
+hadoop fs -copyFromLocal '/home/Downloads/Spark_Demo-master/input2.txt' InputFolder // copy input2.txt to hdfs inputfolder						  
+hadoop fs -rm -r OutputFolder					//remove outputfolder if exist
+hadoop fs -ls OutputFolder					//see the files in outputfolder
+hadoop fs -cat OutputFolder/part-00000				//see the content of the result
 ```
 
 Please replace the paths according to your file locations. If you are facing issues please make sure you are giving the correct paths while loading the Hadoop file from the HDFS
