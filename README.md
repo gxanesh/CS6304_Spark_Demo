@@ -42,9 +42,9 @@ You can access spark by typing absolute path "/opt/spark/bin/spark-shell" also.
 Run a scala file using the following command 
 spark-shell -i '/home/gs37r/test_scala.scala'
 
-####Open new tab on the terminal
-###Hadoop Commands
- 
+
+### Hadoop Commands
+Open new tab on the terminal
 ```
 hadoop fs -rm -r InputFolder				//remove inputfolder if exist
 hadoop fs -mkdir InputFolder				//make the inputfolder
