@@ -38,9 +38,7 @@ EOF
 You can access spark by typing absolute path "/opt/spark/bin/spark-shell" also.
  
 
-### Run a scala file
-Run a scala file using the following command 
-spark-shell -i '/home/gs37r/test_scala.scala'
+
 
 
 ### Hadoop Commands
@@ -73,3 +71,9 @@ hadoop fs -cat OutputFolder/part-00000				//see the content of the result
 ```
 
 Please replace the paths according to your file locations. If you are facing issues please make sure you are giving the correct paths while loading the Hadoop file from the HDFS
+
+### Simple Word Cound Using spark Commands:
+Open the command.txt file and run the commands line by line.
+### Run Word Count using a Scala file
+Run a scala file using the following command 
+spark-shell -i '/home/gs37r/test_scala.scala'
