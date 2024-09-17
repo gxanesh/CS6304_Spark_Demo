@@ -58,7 +58,7 @@ Check again:
 ```
 jps
 ```
-
+Run Hadoop Commands:
 ```
 hadoop fs -rm -r InputFolder					//remove inputfolder if exist
 hadoop fs -mkdir -p InputFolder				       //make the inputfolder
@@ -76,4 +76,6 @@ Please replace the paths according to your file locations. If you are facing iss
 Open the command.txt file and run the commands line by line.
 ### Run Word Count using a Scala file
 Run a scala file using the following command 
+```
 spark-shell -i '/home/gs37r/test_scala.scala'
+```
