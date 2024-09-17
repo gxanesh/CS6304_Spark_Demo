@@ -36,9 +36,24 @@ EOF
 2. Go to the top right corner and select the power button -> Log Out [Don't power off]
 3. Log in to the remote desktop again. Now your spark path is set and you can type "spark-shell" in the terminal to access spark.
 You can access spark by typing absolute path "/opt/spark/bin/spark-shell" also.
+ 
 
 ### Run a scala file
 Run a scala file using the following command 
 spark-shell -i '/home/gs37r/test_scala.scala'
 
-Please replace the paths according to your file locations. If you are facing issues please make sure you are giving the correct paths while loading the hadoop file from the HDFS
+####Open new tab on the terminal
+###Hadoop Commands
+ 
+```
+hadoop fs -rm -r InputFolder				//remove inputfolder if exist
+hadoop fs -mkdir InputFolder				//make the inputfolder
+hadoop fs -copyFromLocal '/home/cloudera/Downloads/Spark_Demo-master/input1.txt' InputFolder
+hadoop fs -copyFromLocal '/home/cloudera/Downloads/Spark_Demo-master/input2.txt' InputFolder
+							//copy input1.txt and input2.txt to hdfs inputfolder
+hadoop fs -rm -r OutputFolder				//remove outputfolder if exist
+hadoop fs -ls OutputFolder				//see the files in outputfolder
+hadoop fs -cat OutputFolder/part-00000			//see the content of the result
+```
+
+Please replace the paths according to your file locations. If you are facing issues please make sure you are giving the correct paths while loading the Hadoop file from the HDFS
