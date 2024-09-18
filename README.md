@@ -48,7 +48,7 @@ Check if Hadoop Deamons are Running:
 ```
 jps
 ```
-If Hadoop Deamons are not Running, run following commands:
+If Hadoop Daemons are not Running correctly, run following commands to stop and restart the daemons:
 ```
 stop-all.sh
 hadoop namenode -format
@@ -58,7 +58,7 @@ Check again:
 ```
 jps
 ```
-if datanode is not running goto following location in your local and delete data folder:
+if datanode is not running go to following location in your local and delete data folder:
 ```
 /temp/hadoop-<your-sso>/dfs
 ```
