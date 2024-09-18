@@ -58,6 +58,11 @@ Check again:
 ```
 jps
 ```
+if datanode is not running goto following location in your local and delete data folder:
+```
+/temp/hadoop-<your-sso>/dfs
+```
+
 Run Hadoop Commands:
 ```
 hadoop fs -rm -r InputFolder					//remove inputfolder if exist
