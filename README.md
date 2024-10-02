@@ -82,5 +82,5 @@ Open the command.txt file and run the commands line by line.
 ### Run Word Count using a Scala file
 Run a scala file using the following command 
 ```
-spark-shell -i '/home/gs37r/test_scala.scala'
+spark-shell -i '/home/gs37r/SimpleWordCount.scala'
 ```
